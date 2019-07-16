@@ -101,7 +101,7 @@ if __name__ == "__main__":
     thresh = 800
 
     # Read the image
-    im = cv2.imread('../pics/CircleLineRect.png', 0).astype('float')
+    im = cv2.imread('./pics/CircleLineRect.png', 0).astype('float')
 
     # Rotation of the image
     if rot_angle != 0:

@@ -122,7 +122,7 @@ if __name__ == "__main__":
 
     ###### Read Image ######
     # im = cv2.imread('../pics/CircleLineRect.png', 0).astype('float')
-    im = cv2.imread('../pics/zurlim.png', 0).astype('float')
+    im = cv2.imread('./pics/zurlim.png', 0).astype('float')
 
 
     ####### Gaussian Smoothing #######
