@@ -38,8 +38,8 @@ def angle_quant(angle):
     Takes the array of gradient direction angles and returns a quantized array where the angles
     are grouped into either 0, 45, 90, or 135 degrees.
 
-    :param angle: Array of gradient directions angles for an image (in degrees).
-    :return: Array of quantized angles (in degrees) so that they can be used for Canny nonmax-suppression.
+    angle: Array of gradient directions angles for an image (in degrees).
+    return: Array of quantized angles (in degrees) so that they can be used for Canny nonmax-suppression.
     """
 
     thetaQ = []
@@ -68,11 +68,11 @@ def nonmax_suppression_canny(grad_mag_thresh, grad_dir_quant):
     Takes the gradient magnitude and direction from an image, and performs Canny nonmax suppression in the direction
     normal to the edge. This essentially thins the detected edges.
 
-    :param grad_mag_thresh: Gradient magnitude for an image which is an array of the same shape as the original image.
+    grad_mag_thresh: Gradient magnitude for an image which is an array of the same shape as the original image.
     This should already be threshold filtered.
-    :param grad_dir_quant: Gradient direction for an image which is an array of the same shape as the original image.
+    grad_dir_quant: Gradient direction for an image which is an array of the same shape as the original image.
     This should already be quantized into 0, 45, 90, 135 degree angles.
-    :return: Array of Canny edges after nonmax suppression normal to the edge direction.
+    return: Array of Canny edges after nonmax suppression normal to the edge direction.
     """
 
     grad_mag_thresh = grad_mag_thresh.copy()
